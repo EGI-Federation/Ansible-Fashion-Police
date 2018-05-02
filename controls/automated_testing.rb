@@ -30,6 +30,6 @@ control 'Travis' do
 
   describe yaml(travis_file) do
     its(['notifications', 'webhooks']) { should cmp 'https://galaxy.ansible.com/api/v1/notifications/' } # must have galaxy notifications
-    its(['script']) { should include 'molecule test' }
+    its(['script']) { should match '/molecule test/' }
   end
 end
