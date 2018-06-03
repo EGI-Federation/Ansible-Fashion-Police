@@ -8,3 +8,7 @@ gem 'rubocop', '~> 0.49.0'
 group :tools do
   gem 'github_changelog_generator', '~> 1.12.0'
 end
+
+gem "httparty", "~> 0.16.2"
+
+gem "awesome_print", "~> 1.8"
