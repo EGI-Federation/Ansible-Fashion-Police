@@ -9,6 +9,6 @@ group :tools do
   gem 'github_changelog_generator', '~> 1.12.0'
 end
 
-gem "httparty", "~> 0.16.2"
+gem 'httparty', '~> 0.16.2'
 
-gem "awesome_print", "~> 1.8"
+gem 'awesome_print', '~> 1.8'
