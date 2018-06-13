@@ -2,12 +2,10 @@
 
 # EGI Ansible Fashion Police
 
-This profile seeks to express the EGI Ansible Style and should be used to
-assert compliance with it.
-This is done with an [InSpec](https://inspec.io) profile.
+This is an [InSpec](https://inspec.io) profile, which tests compliance with the EGI Ansible Style.
 
-This profile is meant to guide developers of Ansible roles for use in EGI
-infrastructure and sites to write them consistent with a [consensus-based
+This profile is meant to guide developers of [Ansible](http://www.ansible.com) roles for use in the EGI
+federation write them consistently  with a [consensus-based
 style guide](https://github.com/EGI-Foundation/ansible-style-guide).
 
 ## Controls
