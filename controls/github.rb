@@ -51,20 +51,22 @@ control 'Master branch' do
   }
   url = github_api + '/repos/EGI-Foundation/' + repo + '/branches/master/protection'
   response = HTTParty.get(url, options)
-  ap response
   json_file = 'master_branch.json'
   File.open(json_file, 'w') do |f|
     f.write(response)
   end
+  ap response.parsed_response
+  
   only_if do
-    !(response.parsed_response['message'].match '/not found/')
+    !(response.parsed_response['message'].match '/Not Found/')
   end
-  puts response.parsed_response['required_status_checks']
-  describe json(json_file) do
-    its(['required_status_checks']['strict']) { should be 'True' }
-  end
-  # File.delete(json_file)
+
+  # describe json(json_file) do
+  #   its(['required_status_checks']['strict']) { should be 'True' }
+  # end
 end
+
+  # File.delete(json_file)
 
 control 'Issue Labels' do
   title 'Check GitHub Issue Labels'
