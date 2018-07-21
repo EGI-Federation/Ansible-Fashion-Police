@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/EGI-Foundation/Ansible-Fashion-Police.svg?branch=master)](https://travis-ci.org/EGI-Foundation/Ansible-Fashion-Police)
+[![Build Status](https://travis-ci.org/EGI-Foundation/Ansible-Fashion-Police.svg?branch=master)](https://travis-ci.org/EGI-Foundation/Ansible-Fashion-Police) 
+[![DOI](https://zenodo.org/badge/131844947.svg)](https://zenodo.org/badge/latestdoi/131844947)
 
 # EGI Ansible Fashion Police
 
