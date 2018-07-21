@@ -33,7 +33,7 @@ control 'Repo Name' do
     f.write(HTTParty.get(url, options))
   end
   describe json(json_file) do
-    its('name') { should match(/^ansible.*-role$/) }
+    its('name') { should match(/^ansible-role-.*$/) }
   end
   File.delete(json_file)
 end
