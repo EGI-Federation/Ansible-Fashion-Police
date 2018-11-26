@@ -35,7 +35,7 @@ control 'Repo Name' do
   describe json(json_file) do
     its('name') { should match(/^ansible-role-.*$/) }
   end
-  File.delete(json_file)
+  # File.delete(json_file)
 end
 
 control 'Master branch' do
@@ -56,7 +56,7 @@ control 'Master branch' do
     f.write(response)
   end
   ap response.parsed_response
-  
+
   only_if do
     !(response.parsed_response['message'].match '/Not Found/')
   end
@@ -96,5 +96,5 @@ control 'Issue Labels' do
   # response.parsed_response.each do |label|
   #   ap label['name']
   # end
-  # loop over them and asser that they are present
+  # loop over them and assert that they are present
 end

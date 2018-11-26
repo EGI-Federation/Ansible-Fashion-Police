@@ -17,7 +17,7 @@ if ENV['TEST_ROLE_PATH'].nil?
   raise 'Please set the path to the role you want to test with TEST_ROLE_PATH'
 end
 test_role_path = ENV['TEST_ROLE_PATH'].to_s
-ansible_dirs = ['defaults', 'handlers', 'meta', 'tasks', 'vars']
+ansible_dirs = ['/defaults', '/handlers', '/meta', '/tasks', '/vars']
 
 control 'Ansible Skeleton Directories' do # A unique ID for this control
   impact 0.8 # The criticality, if this control fails.
