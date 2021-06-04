@@ -28,7 +28,7 @@ control 'Repo Name' do
       'User-Agent' => 'httparty'
     }
   }
-  url = github_api + '/repos/EGI-Foundation/' + repo
+  url = github_api + '/repos/EGI-Federation/' + repo
   File.open(json_file, 'w') do |f|
     f.write(HTTParty.get(url, options))
   end
@@ -49,7 +49,7 @@ control 'Master branch' do
       'User-Agent' => 'httparty'
     }
   }
-  url = github_api + '/repos/EGI-Foundation/' + repo + '/branches/master/protection'
+  url = github_api + '/repos/EGI-Federation/' + repo + '/branches/master/protection'
   response = HTTParty.get(url, options)
   json_file = 'master_branch.json'
   File.open(json_file, 'w') do |f|
@@ -79,8 +79,8 @@ control 'Issue Labels' do
       'User-Agent' => 'httparty'
     }
   }
-  url = github_api + '/repos/EGI-Foundation/' + repo + '/labels'
-  reference_url = github_api + '/repos/EGI-Foundation/ansible-style-guide/labels'
+  url = github_api + '/repos/EGI-Federation/' + repo + '/labels'
+  reference_url = github_api + '/repos/EGI-Federation/ansible-style-guide/labels'
   # puts url
   response = HTTParty.get(url, options)
   ref_response = HTTParty.get(reference_url, options)

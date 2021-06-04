@@ -1,21 +1,31 @@
 {
-    "description": "<p>This is an <a href=\"https://inspec.io\">InSpec</a> profile, which tests compliance with the EGI Ansible Style.</p>\n<p>This profile is meant to guide developers of <a href=\"http://www.ansible.com\">Ansible</a> roles for use in the EGI\nfederation write them consistently  with a <a href=\"https://github.com/EGI-Foundation/ansible-style-guide\">consensus-based\nstyle guide</a>.</p>\nControls\n<p>We implement controls for:</p>\n<ul>\n<li><a href=\"controls/automated_testing.rb\">Automated testing</a></li>\n<li><a href=\"controls/github.rb\">GitHub repository configuraiton</a></li>\n<li><a href=\"controls/role_meta.rb\">Role Metadata</a></li>\n<li><a href=\"controls/role_skeleton.rb\">Role Skeleton</a></li>\n</ul>\n<p>according to the Ansible style guide in use.</p>\nHow to use this profile\n<p><strong>TL;DR: set a few variables, run the profile</strong>:</p>\n<ol>\n<li>You will need to interact with the GitHub API - get a token and set it in the environment : <code>export GITHUB_TOKEN=super_secret_token</code></li>\n<li>Set the name of the repo you want to assert compliance of : <code>export GITHUB_REPO=cmd</code> (this should be a repo under the @EGI-Foundation org)</li>\n<li><code>inspec supermarket exec brucellino/ansible-style-guide</code></li>\n<li>If you want it hot off the press, use the git fetcher : <code>inspec exec -b local http://github.com/EGI-Foundation/ansible-fashion-police</code></li>\n</ol>\n<p><em>This profile should be included in your continuous integration pipeline.</em></p>\nPrerequisites\n<p>You will need <a href=\"https://inspec.io\">Inspec</a> to use this profile.\nThis implies a ruby ( ~&gt; 2.4) runtime environment and the necessary gems.</p>\n<ol>\n<li>Install <a href=\"https://rubygems.org/pages/download\">ruby gems</a></li>\n<li>Install bundler : <code>gem install bundler</code></li>\n<li>Install dependencies: <code>bundle</code></li>\n</ol>\nUsing the profile locally\n<p>This profile expects the role to be in GitHub repository, configured according to good practice.\nIf you use the <a href=\"https://github.com/EGI-Foundation/ansible-style-guide/tree/master/egi-galaxy-template\">Ansible Galaxy skeleton provided by the style guide</a> you should be fine :clap:\nIf you are developing a new Ansible role locally and want to use this profile, you're going to have control failures  for aspects of the repo configuration (master branch protection, labels, <em>etc</em>).\n<strong>You can disable these controls temporarily</strong> - see <a href=\"https://www.inspec.io/docs/reference/cli/\">the Inspec docs</a>.</p>\nContributing\n<p>We're not taking contributions right now.</p>", 
+    "description": "<p>This is an <a href=\"https://inspec.io\">InSpec</a> profile, which tests compliance with the EGI Ansible Style.</p>\n<p>This profile is meant to guide developers of <a href=\"http://www.ansible.com\">Ansible</a> roles for use in the EGI\nfederation write them consistently  with a <a href=\"https://github.com/EGI-Federation/ansible-style-guide\">consensus-based\nstyle guide</a>.</p>\nControls\n<p>We implement controls for:</p>\n<ul>\n<li><a href=\"controls/automated_testing.rb\">Automated testing</a></li>\n<li><a href=\"controls/github.rb\">GitHub repository configuraiton</a></li>\n<li><a href=\"controls/role_meta.rb\">Role Metadata</a></li>\n<li><a href=\"controls/role_skeleton.rb\">Role Skeleton</a></li>\n</ul>\n<p>according to the Ansible style guide in use.</p>\nHow to use this profile\n<p><strong>TL;DR: set a few variables, run the profile</strong>:</p>\n<ol>\n<li>You will need to interact with the GitHub API - get a token and set it in the environment : <code>export GITHUB_TOKEN=super_secret_token</code></li>\n<li>Set the name of the repo you want to assert compliance of : <code>export GITHUB_REPO=cmd</code> (this should be a repo under the @EGI-Federation org)</li>\n<li><code>inspec supermarket exec brucellino/ansible-style-guide</code></li>\n<li>If you want it hot off the press, use the git fetcher : <code>inspec exec -b local http://github.com/EGI-Federation/ansible-fashion-police</code></li>\n</ol>\n<p><em>This profile should be included in your continuous integration pipeline.</em></p>\nPrerequisites\n<p>You will need <a href=\"https://inspec.io\">Inspec</a> to use this profile.\nThis implies a ruby ( ~&gt; 2.4) runtime environment and the necessary gems.</p>\n<ol>\n<li>Install <a href=\"https://rubygems.org/pages/download\">ruby gems</a></li>\n<li>Install bundler : <code>gem install bundler</code></li>\n<li>Install dependencies: <code>bundle</code></li>\n</ol>\nUsing the profile locally\n<p>This profile expects the role to be in GitHub repository, configured according to good practice.\nIf you use the <a href=\"https://github.com/EGI-Federation/ansible-style-guide/tree/master/egi-galaxy-template\">Ansible Galaxy skeleton provided by the style guide</a> you should be fine :clap:\nIf you are developing a new Ansible role locally and want to use this profile, you're going to have control failures  for aspects of the repo configuration (master branch protection, labels, <em>etc</em>).\n<strong>You can disable these controls temporarily</strong> - see <a href=\"https://www.inspec.io/docs/reference/cli/\">the Inspec docs</a>.</p>\nContributing\n<p>We're not taking contributions right now.</p>",
     "license": "other-open", 
-    "title": "EGI-Foundation/Ansible-Fashion-Police: Ansible Fashion Police v0.1.1", 
+    "title": "EGI-Federation/Ansible-Fashion-Police: Ansible Fashion Police v0.1.1",
     "version": "v0.1.1", 
     "upload_type": "software", 
     "publication_date": "2018-06-14", 
     "creators": [
         {
             "affiliation": "EGI Foundation", 
+            "name": "Baptiste Grenier",
+            "orcid": "0000-0002-5686-3193"
+        },
+        {
+            "affiliation": "EGI Foundation",
             "name": "Bruce Becker"
         }
     ], 
+    "communities": [
+        {
+            "identifier": "egi"
+        }
+    ],
     "access_right": "open", 
     "related_identifiers": [
         {
             "scheme": "url", 
-            "identifier": "https://github.com/EGI-Foundation/Ansible-Fashion-Police/tree/v0.1.1", 
+            "identifier": "https://github.com/EGI-Federation/Ansible-Fashion-Police/tree/v0.1.1",
             "relation": "isSupplementTo"
         }, 
         {
