@@ -1,0 +1,29 @@
+language: ruby
+rvm:
+  - 2.3
+env:
+  global:
+    - MD_IGNORE="R1"
+    - RUBOCOP_OPTS="--fail-level=error"
+    - TEST_ROLE_PATH=$PWD
+    - GITHUB_REPO=ansible-role-cmd
+    - secure:
+addons:
+  apt:
+    packages:
+      - ruby-full
+before_install:
+install:
+  - bundle
+before_script:
+script:
+  - rake
+after_success:
+after_failure:
+before_deploy:
+deploy:
+after_deploy:
+after_script:
+notifications:
+  slack:
+    secure:
